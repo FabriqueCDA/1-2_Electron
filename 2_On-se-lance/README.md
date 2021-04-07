@@ -6,7 +6,7 @@ Après le petit quickstart on va attaquer une petite application simple avec Ele
 Maintenant que vous êtes déniaisé.e.s sur le sujet, que le lancement s'est fait facilement (more or less) et que vous êtes prêt.e.s, nous allons regarder deux trois petites points théoriques ensemble : le fonctionnement en développement, les questions de sécurité et des outils spécifiques pour manipuler les fenêtres.
 
 ### Fonctionner en développement
-Il existe différentes manières d'arriver à syncrhoniser votre développement avec le rendu pour faciliter son fonctionnement. Nous nous sommes arrêtés sur le module 'ELECTROMON' qui fait très bien le job.
+Il existe différentes manières d'arriver à synchroniser votre développement avec le rendu pour faciliter son fonctionnement. Nous nous sommes arrêtés sur le module 'ELECTROMON' qui fait très bien le job.
 #### Qu'est ce que c'est-il que c'est c'est ?
 ELECTROMON surveille votre dossier de développement. Chaque changement induit une mise à jour du rendu.  
 #### Comment ça marche ?
