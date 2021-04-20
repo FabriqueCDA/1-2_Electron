@@ -1,0 +1,17 @@
+{
+    "titre": "-] Réseaux sociaux [-",
+    "description": "Rejoignez-nous sur nos réseaux sociaux",
+    "lien": "",
+    "datas": [
+        {
+            "titre": "Facebook",
+            "lien": "https://www.facebook.com/lafabriquedunumeriquepaloise",
+            "img": "assets/images/logos/fb.jpg"
+        },
+        {
+            "titre": "LinkedIn",
+            "lien": "https://fr.linkedin.com/company/step-sa",
+            "img": "assets/images/logos/li.jpg"
+        }
+    ]
+}

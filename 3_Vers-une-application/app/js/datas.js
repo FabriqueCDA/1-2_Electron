@@ -2,63 +2,135 @@
 export const menu = [{
         nom: "Accueil",
         alias: 'accueil',
+        instance:'Accueil',
         lien: "accueil.html",
+        el:'#accueil',
         infos: "Retourner à l'accueil"
     },
     {
         nom: "Etudiants",
         alias: 'etudiants',
         lien: "etudiants.html",
+        instance:'Etudiants',
+        el:'#etudiants',
         infos: "Voir la liste des étudiants"
     },
     {
         nom: "Contact",
         alias: 'contact',
         lien: "contact.html",
+        instance:'Contact',
+        el:'#contact',
         infos: "Envoyer un message"
     }
 ];
-// Liste des étudiants
-export const etudiants = [{
+export const PAGES = {
+    "accueil":{
+        "titre":"-] Bienvenue [-",
+        "description":"Bienvenue sur le mini logiciel de gestion des étudiants",
+        "lien":"",
+        "datas":[{
+        }]
+    },
+    "etudiants":{
+        "titre":"-] Liste des étudiants [-",
+        "description":"Une liste des étudiants de la promotion",
+        "lien":"",
+        "datas":[{
             nom: "Auriane Simonot",
             sexe: "Féminin",
             age: "26 ans",
             entreprise: "Sysclope",
-            specialites: "JS, Front, UI"
+            specialites: "JS, Front, UI",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
         },
         {
             nom: "Tahar Sadeki",
             sexe: "Masculin",
             age: "26 ans",
-            entreprise: "... suspens",
-            specialites: "JS, Java, Couscous, Coca-cola"
+            entreprise: "French tech",
+            specialites: "JS, Java, Couscous, Coca-cola",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
         },
         {
             nom: "Mathieu Pavy",
             sexe: "Masculin",
             age: "26 ans",
             entreprise: "DevX",
-            specialites: "JS, Bièèère, faire la java"
+            specialites: "JS, Bièèère, faire la java",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
         },
         {
             nom: "Oussam Jomaa",
             sexe: "Masculin",
             age: "28 ans",
             entreprise: "Fabrique Numérique",
-            specialites: "PHP, Gérer Alaa"
+            specialites: "PHP, Gérer Alaa",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
         },
         {
             nom: "Alaa Ahmad",
             sexe: "Masculin",
             age: "28 ans",
             entreprise: "Fabrique Numérique",
-            specialites: "Impeccable, c'est rasciste, intéressantx"
+            specialites: "Impeccable, c'est rasciste, intéressant",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
+        },
+        {
+            nom: "Julien Chini",
+            sexe: "Masculin",
+            age: "21 ans",
+            entreprise: "H64",
+            specialites: "Utilité, calme",
+            reseaux : {
+                facebook:'',
+                instagram:'',
+                linkedin:'',
+                snapchat:'',
+                tiktok:''
+            }
         }
     ]
-    // Informations de contact
-export const contact = {
-    mail: "simplon@fabriquenumerique.fr",
-    sujet: "Merci de remplir les champs requis",
-    alerte: "Attention, il manque des informations dans votre formulaire",
-    ok: "Message envoyé"
-}
+    },
+    "contact":{
+        "titre":"-] Nous contacter [-",
+        "description":"Merci de remplir les champs ci-dessous",
+        "lien":"gabbadie@fabriquenumerique.fr",
+        "data":[{
+            mail: "simplon@fabriquenumerique.fr",
+            sujet: "Merci de remplir les champs requis",
+            alerte: "Attention, il manque des informations dans votre formulaire",
+            ok: "Message envoyé"
+        }]
+    }
+};
