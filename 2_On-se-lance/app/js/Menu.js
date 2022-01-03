@@ -1,15 +1,16 @@
-import { menu } from './datas.js';
+import { menu } from '../datas.js';
 import { Persistance } from './Persistance.js';
-
-const fs = require('fs');
+import { Rendu } from './Rendu.js';
 
 export class Menu {
 
     menu; // Le menu dans son ensemble à écrire
-    corps; // Stockage du corps du HTML à écrire dans le main
+    corps; // Stockage du corps du HTML à écrire dans la page
+    rendu; // Classe utile pour rendre du contenu dans les pages
 
     constructor(el, c) {
-        this.menu = menu;
+        console.log('Ecriture du menu');
+        this.menu = menu; // Récupérer les données du menu
         try {
             if (el) this.setMenu(el);
         } catch (er) {
@@ -30,34 +31,27 @@ export class Menu {
             m => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
-                // a.setAttribute('href', '');
-                // a.setAttribute('click', `this.getTemplate('${m.lien}')`)
                 li.onclick = () => this.getTemplate(m);
                 a.setAttribute('title', m.infos);
                 a.textContent = m.nom;
-                // a.addEventListener('mousedown', this.getTemplate(m.lien));
                 li.appendChild(a);
                 ul.appendChild(li);
             }
         );
         el.appendChild(ul);
-    };
-    // Charger un template HTML
-    loadTemplate() {
-        console.log("template load");
+        console.log(el);
     };
     // Ecrire un template dans le DOM
     getTemplate(p) {
         console.log(p);
-        fs.readFile('./app/pages/' + p.lien, 'utf-8', (err, html) => {
-            if (err) {
-                console.error(err)
-                return
-            };
-            console.log(html.trim(), typeof html);
-            this.corps.innerHTML = html.trim();
-            Persistance.page = p.alias;
-            console.log(this, Persistance.page);
-        })
+        /** p est un objet qui reçoit un lien (p.lien) indiquant quel fichier HTML charger dans le dossiers pages
+         * C'est donc ici qu'il faut créer une fonction permettant de charger la page HTML et de l'envoyer au rendu
+         * utilisez ces lignes de code pour traiter les données :
+         * this.corps.innerHTML = html;
+         * Persistance.page = p.alias;
+         * this.rendu = new Rendu(p);
+         * 
+         * Récupérez le fichier en utilisant fs de NodeJs. Ca vous permettra de prendre conscience du potentiel et des problèmes de sécurité
+        */
     }
 }

@@ -13,7 +13,7 @@ export class Menu {
     constructor(el, c) {
         console.log('Ecriture du menu');
         this.menu = menu; // Récupérer les données du menu
-        // this.rendu = new Rendu(); // Permettre le rendu des pages
+        
         try {
             if (el) this.setMenu(el);
         } catch (er) {

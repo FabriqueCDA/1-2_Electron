@@ -5,7 +5,7 @@ export class Persistance {
     static page;
 
     constructor() {}
-
+    // 
     setRacine(r) {
         try {
             if (r) this.racine = r;

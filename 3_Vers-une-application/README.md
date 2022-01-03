@@ -42,6 +42,8 @@ Créez une classe qui permettra de gérer les événements IPC du processus prin
 - d'écrire dans données dans des fichiers JSON locaux
 - de gérer si l'application est connectée ou déconnectée et d'adopter une stratégie de gestion des données en conséquence.
 
+Tenez compte des travaux fais dans l'exercice précédent et poussez la question de la sécurité si vous pouvez.
+
 C'est un peu cossu mais pour vous aider, considérez les éléments suivants :
 - net permet de faire des requêtes,
 - webContents.send est attaché à la fenêtre de l'application dans le processus principal,

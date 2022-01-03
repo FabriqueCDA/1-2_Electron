@@ -1,7 +1,7 @@
 {
     "name": "electronstrater",
     "version": "1.0.0",
-    "description": "Application de démarrage pour toucher aux base d'Electron (Attention ! Sans description ni auteur, Nuget risque de planter au moment de la compilation)",
+    "description": "Application de démarrage pour toucher aux bases d'Electron (Attention ! Sans description ni auteur, Nuget risque de planter au moment de la compilation)",
     "main": "main.js",
     "scripts": {
         "start": "electron-forge start",

@@ -37,16 +37,7 @@ h2 {
     width: 100%;
     text-align: center;
 }
-body>header{
-    display:flex;
-    flex-flow: row nowrap;
-}
-body>header>*{
-    max-width:50%;
-}
-body>header>nav{
-    float:right;
-}
+
 main {
     display: flex;
     flex-flow: row nowrap;
@@ -83,26 +74,4 @@ nav>ul {
 
 nav a {
     text-transform: uppercase;
-}
-
-/* FORMULAIRES */
-form{
-    display:flex;
-    flex-flow:column wrap;
-}
-input, textarea, button{
-    padding:10px 18px;
-    margin:10px auto;
-    box-shadow: 0px 0px 2px black;
-    transition:all .3s ease;
-    border:none;
-}
-input:focus, textarea:focus{
-    border-bottom:4px solid yellow;
-}
-button{
-    background-color: yellow;
-}
-button:hover{
-    background-color: orange;
 }

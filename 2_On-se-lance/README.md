@@ -4,17 +4,18 @@ Après le petit quickstart on va attaquer une petite application simple avec Ele
 
 ## Avant d'attaquer
 Maintenant que vous êtes déniaisé.e.s sur le sujet, que le lancement s'est fait facilement (more or less) et que vous êtes prêt.e.s, nous allons regarder deux trois petites points théoriques ensemble : le fonctionnement en développement, les questions de sécurité et des outils spécifiques pour manipuler les fenêtres.
-
+### Installer Electron
+Bon, si c'est pas déjà fait bin... npm install -g electron
 ### Fonctionner en développement
 Il existe différentes manières d'arriver à synchroniser votre développement avec le rendu pour faciliter son fonctionnement. Nous nous sommes arrêtés sur le module 'ELECTROMON' qui fait très bien le job.
 #### Qu'est ce que c'est-il que c'est c'est ?
 ELECTROMON surveille votre dossier de développement. Chaque changement induit une mise à jour du rendu.  
 #### Comment ça marche ?
 > Installer ELECTROMON : npm install -g electromon.
-> Positionnez-vous dans votre dossier de développement et démarrez la synchro avec 'electromon (votrefichier-souvent:main).js'.
+> Positionnez-vous dans votre dossier de développement et démarrez la synchro avec 'electromon (votrefichier:main).js'.
 > Votre logiciel se mettra à jour lorsque le dossier de développement sera modifié.
 ### Les quetions de sécurité
-Vous développez une application qui a accès au système. Toute erreur peut induire une corruption majeure de votre application. [Lisez cette page**](https://www.electronjs.org/docs/tutorial/security), elle présente un ensemble de bonnes pratiques. Il vous faudra les ajouter par incrémentation à votre travail. Essayez d'y revenir pour vous forger des bonnes pratiques petit à petit (alllé, jetez-y un oeil voyons, vous savez que vous en aurez besoin... ^^).
+Vous développez une application qui a accès au système. Toute erreur peut induire une corruption majeure de votre application. [Lisez cette page**](https://www.electronjs.org/docs/tutorial/security), elle présente un ensemble de bonnes pratiques. Il vous faudra les ajouter par incrémentation à votre travail. Essayez d'y revenir pour vous forger des bonnes pratiques petit à petit (allééé, jetez-y un oeil voyons, vous savez que vous en aurez besoin... ^^ On se fera un debrief ensemble pour bien comprendre les différents enjeux).
 ## Remettons-nous à la production... oufff...
 Nous allons développer une petite application de gestion.
 ### Un premier processus autonome
@@ -22,7 +23,7 @@ Le travail que nous allons réaliser simulera le type de résultats que vous obt
 ### Modifier le menu de l'application
 Electron s'insère dans des environnements de bureau et utilise les outils de ceux-ci pour la gestion des fenêtres. NodeJS donne accès aux fichiers locaux. A partir de cette base, les possibilités s'ouvrent. Nous allons commencer par modifier le menu de la fenêtre.
 #### Remplacer le menu initial
-Tout se passe dans le fichier de l'application mainRenderer (disons main.js). Nous avons plusieurs stratégies, nous avons fait un choix présenté ici en quelques étapes :
+Tout se passe dans le fichier de l'application mainRenderer (main.js). Nous avons plusieurs stratégies, nous avons fait un choix présenté ici en quelques étapes :
 - Etape 1 : établir un objet template
 Il répond à un formatage dont voici un exemple :
 ```
@@ -92,7 +93,10 @@ Utilisez l'exemple de l'API pour tester les échanges de données entre processu
 - [Webcontents](https://www.electronjs.org/docs/api/web-contents)
 La classe webcontents est un gestionnaire d'événements qui permet au processus principal de s'informer sur le traitement des contenus Web chargés.
 
-
+### Petit détour sur les pages de rendu pour vous sensibiliser
+L'étape franchie, vous vous êtes rendu compte qu'il y avait comme un petit soucis de sécurité. Pas toujours si vous vous arrangez bien mais potentiellement. Vous devriez pouvoir refactoriser votre code pour passer par un fichier preload pour s'occuper de la gestion des événèments vers les pages de rendu.
+  
+  
 * pour les CDAs, nous pouvons vous inviter à relire la compétence Développer une application de type Desktop pour vous immerger dans le sujet. ous verrez qu'elle induit tout un ensemble de considérations sur la modélisation et la POO notamment.
 ** Et oui, galère, y a un paquet de trucs à lire mais vous avez vu, on vous a d'abord fait créer un truc facile pour vous amuser. On est sympas hein ?
 *** One page c'est un terme d'une langue étrangère. Vous pouvez obtenir plus d'informations sur le site [suivant](https://www.1min30.com/dictionnaire-du-web/site-one-page).
